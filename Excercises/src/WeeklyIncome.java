@@ -5,12 +5,13 @@ public class WeeklyIncome {
         Scanner sc = new Scanner(System.in);
         int week[] = new int[7];
         int income[] = new int[7];
-        int totalEarnings = 0;
+        int totalEarnings = 0, totalHrs = 0;
         //Weekly pay
         for(int i=0;i<7;i++) {
             week[i] = sc.nextInt();
+            totalHrs += week[i];
             income[i] = week[i] * 100;   //regular pay
-            if (week[i] > 8) {
+            if (week[i] > 8) {           // >8hrs then Rs.15/hr
                 income[i] += (week[i] - 8) * 15;
             }
             if(i == 0) {                 //Sunday - 50% bonus
@@ -20,6 +21,9 @@ public class WeeklyIncome {
                 income[i] += (income[i] * (0.25));
             }
             totalEarnings += income[i];
+        }
+        if(totalHrs > 40) {              // >40hrs then 2Rs.5/hr
+            totalEarnings += (totalHrs-40)*25;
         }
         System.out.println(totalEarnings);
     }
