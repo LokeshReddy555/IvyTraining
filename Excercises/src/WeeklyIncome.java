@@ -22,7 +22,7 @@ public class WeeklyIncome {
             }
             totalEarnings += income[i];
         }
-        if(totalHrs > 40) {              // >40hrs then 2Rs.5/hr
+        if(totalHrs > 40) {              // >40hrs then Rs.25/hr
             totalEarnings += (totalHrs-40)*25;
         }
         System.out.println(totalEarnings);
