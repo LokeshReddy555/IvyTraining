@@ -23,13 +23,13 @@ public class Lab {
         }
 
         //checking which is more suitable
-        if(lab1 >= 0 && lab1<=lab2 && lab1<=lab3) {
+        if(lab1 != Integer.MAX_VALUE && lab1<=lab2 && lab1<=lab3) {
             System.out.println("L1");
         }
-        else if(lab2 >= 0 && lab2<=lab3 && lab2<=lab1) {
+        else if(lab2 != Integer.MAX_VALUE && lab2<=lab3 && lab2<=lab1) {
             System.out.println("L2");
         }
-        else if(lab3 >= 0 && lab3<=lab1 && lab3<=lab2) {
+        else if(lab3 != Integer.MAX_VALUE && lab3<=lab1 && lab3<=lab2) {
             System.out.println("L3");
         }
         else {
