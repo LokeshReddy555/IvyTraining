@@ -12,6 +12,7 @@ public class MeanModeMedian {
         }
         System.out.println(mean(array));
         System.out.println(mode(array));
+        System.out.println(median(array));
     }
     public static float mean(int[] array) {
         float mean = 0, sum = 0;
@@ -32,5 +33,16 @@ public class MeanModeMedian {
             }
         }
         return mode;
+    }
+    public static float median(int[] array) {
+        float median = 0;
+        int length = array.length;
+        if( array.length%2 == 0 ) {               //if even length
+            median = (float) ((array[(length/2)-1]+array[(length/2)])/2.0);
+        }
+        else {                                    //if odd
+            median = (array[length/2]);
+        }
+        return median;
     }
 }
