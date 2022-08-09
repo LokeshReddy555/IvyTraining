@@ -1,6 +1,7 @@
 package daytwo;
 
-import java.util.Scanner;
+import java.util.*;
+import java.util.Arrays;
 
 public class MeanModeMedian {
     public static void main(String[] args) {
@@ -36,6 +37,7 @@ public class MeanModeMedian {
     }
     public static float median(int[] array) {
         float median = 0;
+        Arrays.sort(array);                      //Important
         int length = array.length;
         if( array.length%2 == 0 ) {               //if even length
             median = (float) ((array[(length/2)-1]+array[(length/2)])/2.0);
