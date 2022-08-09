@@ -5,6 +5,7 @@ public class HolidayProgram {
         Holiday instanceOne = new Holiday("Independence Day",4,"July");
         Holiday instanceTwo = new Holiday("Republic Day",26,"January");
         System.out.println(Holiday.inSameMonth(instanceOne,instanceTwo));
+        System.out.println(Holiday.avgDate(new Holiday[]{instanceOne,instanceTwo}));
     }
 }
 class Holiday {
