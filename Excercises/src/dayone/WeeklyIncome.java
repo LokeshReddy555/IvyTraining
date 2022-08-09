@@ -1,3 +1,5 @@
+package dayone;
+
 import java.util.Scanner;
 
 public class WeeklyIncome {
